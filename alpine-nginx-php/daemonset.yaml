@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: alpngx-test
+spec:
+  selector:
+    matchLabels:
+      name: alpngx-test
+  template:
+    metadata:
+      labels:
+        name: alpngx-test
+    spec:
+      containers:
+      - name: alpngx-test
+        image: nex07/alpngx
